@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+  <title>Restaurant App</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/077191d827.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+</head>
+<body>
+  <section>
+
+
+
+  <span style="display:none" class="email"><%= user.local.email %></span>
+
+  <div class="page-header text-center">
+    <h1>Restaurant: All Orders</h1>
+    <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+  </div>
+
+  <!-- <div class="col-sm-6"> -->
+  <section class="huge">
+
+
+    <div class="chef">
+      <h3><span class="fa fa-user"></span> Chef's Profile Info</h3>
+
+      <% if (user.local.email) { %>
+        <p>
+
+          <strong>Chef's name</strong>: <%= user.local.email %><br>
+
+        </p>
+
+        <a href="/unlink/local" class="btn btn-default">Delete Account</a>
+        <% } else { %>
+          <a href="/signup" class="btn btn-default">Create Account</a>
+          <% } %>
+
+        </div>
+      </div>
+
+      <section>
+        <section class="pending">
+
+
+        <h3>Pending orders</h3>
+        <ul class="orders">
+          <% for(var i=0; i < orders.length; i++) {%>
+            <% if(orders[i].completed === undefined){ %>
+
+              <li class="orderListItem">
+
+
+                <span><%= orders[i].customer %></span>
+                <span><%= orders[i].order %></span>
+              </li>
+              <% } %>
+              <% } %>
+
+            </ul>
+</section>
+
+<section class="completeContain">
+
+
+            <h3>Completed Orders</h3>
+            <ul class="completed">
+              <% for(var i=0; i< orders.length; i++) {%>
+                <% if (orders[i].completed === true && user.local.email == orders[i].name) { %>
+                  <li>
+                    <span><%= orders[i].name %></span>
+                    <span><%= orders[i].customer %></span>
+                    <span><%= orders[i].order %></span>
+                    <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+                  </li>
+                  <% } %>
+                  <% } %>
+                </ul>
+              </section>
+              </section>
+</section>
+
+              <script src="main.js"></script>
+            </body>
+            </html>

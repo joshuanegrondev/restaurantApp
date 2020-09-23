@@ -1,0 +1,57 @@
+body{
+  padding-top:80px;
+  word-wrap:break-word;
+  background-image: url(bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  font-family: 'Bebas Neue', cursive;
+  box-sizing: border-box;
+
+
+}
+
+h1 , h3{
+  font-family: 'Bebas Neue', cursive;
+
+}
+
+h3{
+  font-size: 25px;
+}
+
+li{
+  font-family: 'Bebas Neue', cursive;
+  list-style: none;
+  font-size: 20px;
+}
+
+img{
+  height: 200px;
+}
+
+.jumbotron{
+  background-color: black;
+}
+
+.completed{
+color: red;
+}
+
+.chef{
+  width: 30%;
+  float: left;
+  padding-left: 5%;
+  /* background-color: black; */
+}
+.completeContain, .pending{
+  float: left;
+  width: 30%;
+  /* background-color: black; */
+}
+.huge{
+  height: 50vh;
+  background-color: black;
+  width: 80%;
+  margin-left: 10%;
+}

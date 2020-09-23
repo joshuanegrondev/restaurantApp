@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+    <title>Restaurant App</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+    <div class="jumbotron text-center">
+      <h1>Restaurant Orders App</h1>
+      <form action="/food" method="post">
+        <input type="text" placeholder="Your name" name="customer" >
+        <input type="text" placeholder="What's your order?" name="order" >
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <p>Log in or Sign up:</p>
+    <a href="/login" class="btn btn-default"><span class="fa fa-user"></span>Log In</a>
+    <a href="/signup" class="btn btn-default"><span class="fa fa-user"></span>Sign Up</a>
+
+</div>
+  <script src="main.js"></script>
+</body>
+</html>
